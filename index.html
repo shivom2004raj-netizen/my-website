@@ -1,0 +1,287 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Business Website</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#0f0f1e;
+color:white;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+background:linear-gradient(135deg,#4b00ff,#7d2ae8,#00c6ff);
+overflow:hidden;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+width:500px;
+height:500px;
+background:rgba(255,255,255,.15);
+border-radius:50%;
+top:-150px;
+left:-100px;
+filter:blur(50px);
+}
+
+.hero::after{
+content:'';
+position:absolute;
+width:400px;
+height:400px;
+background:rgba(255,255,255,.15);
+border-radius:50%;
+bottom:-120px;
+right:-80px;
+filter:blur(50px);
+}
+
+.hero-content{
+z-index:2;
+max-width:700px;
+padding:20px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-bottom:30px;
+line-height:1.6;
+}
+
+.btn{
+padding:15px 35px;
+background:white;
+color:#4b00ff;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+section{
+padding:80px 10%;
+}
+
+.title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:25px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,.3);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.stat{
+background:#17172c;
+padding:30px;
+border-radius:20px;
+}
+
+.stat h2{
+font-size:3rem;
+color:#00c6ff;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.contact{
+text-align:center;
+}
+
+input,textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+}
+
+button{
+padding:15px 30px;
+background:#7d2ae8;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+footer{
+background:#080812;
+padding:30px;
+text-align:center;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:2.5rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Future Business Solutions</h1>
+<p>Modern digital solutions with creative design, powerful technology and innovative strategies.</p>
+<a href="#services" class="btn">Explore More</a>
+</div>
+</section>
+
+<section id="services">
+<h2 class="title">Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="">
+<h3>Business Strategy</h3>
+<p>Helping companies grow with smart planning and market analysis.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="">
+<h3>Digital Marketing</h3>
+<p>Reach more customers through modern marketing campaigns.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="">
+<h3>Web Development</h3>
+<p>Professional websites and digital products for your business.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 class="title">Our Growth</h2>
+
+<div class="stats">
+<div class="stat">
+<h2>500+</h2>
+<p>Projects</p>
+</div>
+
+<div class="stat">
+<h2>250+</h2>
+<p>Clients</p>
+</div>
+
+<div class="stat">
+<h2>98%</h2>
+<p>Satisfaction</p>
+</div>
+
+<div class="stat">
+<h2>24/7</h2>
+<p>Support</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2 class="title">Gallery</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+<img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd">
+</div>
+</section>
+
+<section class="contact">
+<h2 class="title">Contact Us</h2>
+
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>
+<p>© 2026 Future Business Solutions. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+```
